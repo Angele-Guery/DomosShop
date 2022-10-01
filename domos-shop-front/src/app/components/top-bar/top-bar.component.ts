@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShoppingCartService} from '../../services/shopping-cart.service'
 
 @Component({
   selector: 'app-top-bar',
@@ -6,15 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
-  hidden = false;
-  nbProductAdded = 7;
 
-  badge(){
-      this.hidden = !this.hidden;
-    }
-
-
-  constructor() { }
+  constructor(public shoppingCartService : ShoppingCartService) { }
 
   ngOnInit(): void {
   }

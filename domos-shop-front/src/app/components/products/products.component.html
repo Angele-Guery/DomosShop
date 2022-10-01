@@ -18,7 +18,7 @@
       {{ product.price}}€
     </p>
 
-  <button mat-raised-button color="primary" class="bouton" (click)="add()">
+  <button mat-raised-button color="primary" class="bouton" (click)="add(); shoppingCartService.incrementBadge()">
     Ajouter au panier
   </button>
 

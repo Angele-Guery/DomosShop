@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from './predefined-products';
-
+import {ShoppingCartService} from '../../services/shopping-cart.service'
 
 @Component({
   selector: 'app-products',
@@ -14,7 +14,7 @@ export class ProductsComponent implements OnInit {
       window.alert('Le produit a été ajouté au panier!');
     }
 
-  constructor() { }
+  constructor(public shoppingCartService : ShoppingCartService) { }
 
   ngOnInit(): void {
 
