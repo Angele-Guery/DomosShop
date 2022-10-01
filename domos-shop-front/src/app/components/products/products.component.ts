@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from './predefined-products';
+
 
 @Component({
   selector: 'app-products',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  products = products;
+
+  add(){
+      window.alert('Le produit a été ajouté au panier!');
+    }
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

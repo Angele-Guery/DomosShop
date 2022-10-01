@@ -8,7 +8,7 @@
 
 <span>
   <a>
-    <button mat-stroked-button color="primary" class="panier-bouton">
+    <button mat-stroked-button color="primary" class="panier-bouton bouton" matBadge={{nbProductAdded}} [matBadgeHidden]="hidden" matBadgeColor="accent" (click)="badge()">
       <i class="material-icons">shopping_cart</i>Panier
     </button>
   </a>

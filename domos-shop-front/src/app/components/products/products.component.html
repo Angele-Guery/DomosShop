@@ -1,1 +1,33 @@
-<p>products works!</p>
+<mat-card>
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <mat-card>
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    {{ product.description }}
+  </p>
+
+    <p *ngIf="product.price">
+      {{ product.price}}€
+    </p>
+
+  <button mat-raised-button color="primary" class="bouton" (click)="add()">
+    Ajouter au panier
+  </button>
+
+
+
+
+    </mat-card>
+  <br>
+</div>
+
+</mat-card>
+

@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +36,8 @@ import { ProductsComponent } from './components/products/products.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatDividerModule,
+    MatBadgeModule
     //RouterModule.forRoot([
       //    { path: '', component: products },
         //])
