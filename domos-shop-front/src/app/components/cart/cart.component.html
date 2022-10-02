@@ -1,0 +1,47 @@
+<mat-card>
+  <h2>Produits de votre panier</h2>
+
+  <div *ngFor="let product of products">  <!-- plus tard parcourir la base de donner et chercher ceux dans panier et le nombre de fois -->
+    <mat-card>
+
+      <h3>
+        <div class="productsNames">
+          {{ product.name }}
+        </div>
+      </h3>
+
+      <p *ngIf="product.description">
+        {{ product.description }}
+      </p>
+
+      <p *ngIf="product.price">
+        {{ product.price}}€
+      </p>
+
+      <button mat-raised-button color="warn" class="bouton" (click)="remove(); shoppingCartService.decrementBadge()">
+        <span class="material-icons">delete</span> <!-- si plusieurs, suprime un à la fois -->
+      </button>
+
+
+    </mat-card>
+
+  </div>
+
+  <br>
+
+  <div class="box">
+    <div>
+      <button mat-raised-button color="warn" class="bouton" (click)="removeAll(); shoppingCartService.emptyCart()">
+        Vider le panier
+      </button>
+
+    </div>
+    <div>
+      <button mat-raised-button color="accent" class="bouton" (click)="buy(); shoppingCartService.emptyCart()">
+        Acheter
+      </button>
+
+    </div>
+  </div>
+
+</mat-card>
