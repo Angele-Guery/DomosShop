@@ -22,13 +22,24 @@
         <span class="material-icons">delete</span> <!-- si plusieurs, suprime un à la fois -->
       </button>
 
-
     </mat-card>
-
+<br>
   </div>
 
   <br>
 
+  <h3>
+    <div class="total-price">
+    <div class="title">
+      Prix Total :
+    </div>
+      <div>
+     ???€ <!-- calcul du prix total -->
+      </div>
+      </div>
+  </h3>
+
+  <br>
   <div class="box">
     <div>
       <button mat-raised-button color="warn" class="bouton" (click)="removeAllAlert(); shoppingCartService.emptyCart()">

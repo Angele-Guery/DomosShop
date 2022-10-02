@@ -17,8 +17,8 @@ a:hover {
   opacity: 0.8;
 }
 
-app-products a{
-  color: #1976d2;
+app-top-bar a{
+  color: white;
   text-decoration: none;
 }
 
@@ -39,6 +39,11 @@ app-products a{
 .title{
   font-weight: bold;
   color: #683ab7;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-start;
 }
 
 

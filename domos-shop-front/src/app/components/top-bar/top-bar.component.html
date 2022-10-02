@@ -1,17 +1,17 @@
 <mat-toolbar color="primary">
 
   <span class="mat-toolbar-row">
-  <a>
+  <a routerLink="/">
     <h1>Domos Shop</h1>
   </a>
   </span>
 
 <div class="box">
   <div>
-    <button mat-stroked-button color="primary" class="boutons-top-bar bouton">
+    <button mat-stroked-button color="primary" class="boutons-top-bar bouton" routerLink="/dashboard">
       <span class="material-icons">dashboard</span> Dashboard
     </button>
-    <button mat-stroked-button color="primary" class="boutons-top-bar bouton" matBadge={{shoppingCartService.nbProductAdded}} [matBadgeHidden]="shoppingCartService.hidden" matBadgeColor="accent">
+    <button mat-stroked-button color="primary" class="boutons-top-bar bouton" matBadge={{shoppingCartService.nbProductAdded}} [matBadgeHidden]="shoppingCartService.hidden" matBadgeColor="accent" routerLink="/cart">
       <span class="material-icons">shopping_cart</span> Panier
     </button>
   </div>
