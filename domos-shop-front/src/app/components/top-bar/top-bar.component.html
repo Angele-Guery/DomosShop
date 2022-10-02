@@ -6,13 +6,16 @@
   </a>
   </span>
 
-<span>
-  <a>
-    <button mat-stroked-button color="primary" class="panier-bouton bouton" matBadge={{shoppingCartService.nbProductAdded}} [matBadgeHidden]="shoppingCartService.hidden" matBadgeColor="accent">
-      <i class="material-icons">shopping_cart</i>Panier
+<div class="box">
+  <div>
+    <button mat-stroked-button color="primary" class="boutons-top-bar bouton">
+      <span class="material-icons">dashboard</span> Dashboard
     </button>
-  </a>
-</span>
+    <button mat-stroked-button color="primary" class="boutons-top-bar bouton" matBadge={{shoppingCartService.nbProductAdded}} [matBadgeHidden]="shoppingCartService.hidden" matBadgeColor="accent">
+      <span class="material-icons">shopping_cart</span> Panier
+    </button>
+  </div>
+</div>
 
 </mat-toolbar>
 

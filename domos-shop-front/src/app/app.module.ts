@@ -18,12 +18,16 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './components/products/products.component';
+import { CartComponent } from './components/cart/cart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductsComponent
+    ProductsComponent,
+    CartComponent,
+    DashboardComponent
   ],
   imports: [
     MatInputModule,
