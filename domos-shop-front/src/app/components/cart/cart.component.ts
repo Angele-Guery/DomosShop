@@ -11,15 +11,15 @@ export class CartComponent implements OnInit {
 
   products = products;
 
-  remove(){
+  removeAlert(){
     window.alert('Le produit a été suprimé du panier!');
   }
 
-  removeAll(){
+  removeAllAlert(){
     window.alert('Le panier a été vidé!');
   }
 
-  buy(){
+  buyAlert(){
     window.alert('Merci pour vos achats!');
   }
 

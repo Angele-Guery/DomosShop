@@ -10,7 +10,7 @@ import {ShoppingCartService} from '../../services/shopping-cart.service'
 export class ProductsComponent implements OnInit {
   products = products;
 
-  add(){
+  addAlert(){
       window.alert('Le produit a été ajouté au panier!');
     }
 

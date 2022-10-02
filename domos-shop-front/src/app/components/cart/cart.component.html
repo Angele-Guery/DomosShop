@@ -5,7 +5,7 @@
     <mat-card>
 
       <h3>
-        <div class="productsNames">
+        <div class="title">
           {{ product.name }}
         </div>
       </h3>
@@ -18,7 +18,7 @@
         {{ product.price}}€
       </p>
 
-      <button mat-raised-button color="warn" class="bouton" (click)="remove(); shoppingCartService.decrementBadge()">
+      <button mat-raised-button color="warn" class="bouton" (click)="removeAlert(); shoppingCartService.decrementBadge()">
         <span class="material-icons">delete</span> <!-- si plusieurs, suprime un à la fois -->
       </button>
 
@@ -31,13 +31,13 @@
 
   <div class="box">
     <div>
-      <button mat-raised-button color="warn" class="bouton" (click)="removeAll(); shoppingCartService.emptyCart()">
+      <button mat-raised-button color="warn" class="bouton" (click)="removeAllAlert(); shoppingCartService.emptyCart()">
         Vider le panier
       </button>
 
     </div>
     <div>
-      <button mat-raised-button color="accent" class="bouton" (click)="buy(); shoppingCartService.emptyCart()">
+      <button mat-raised-button color="accent" class="bouton" (click)="buyAlert(); shoppingCartService.emptyCart()">
         Acheter
       </button>
 

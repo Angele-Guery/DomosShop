@@ -5,7 +5,7 @@
   <mat-card>
 
   <h3>
-    <div class="productsNames">
+    <div class="title">
       {{ product.name }}
     </div>
   </h3>
@@ -18,7 +18,7 @@
       {{ product.price}}€
     </p>
 
-  <button mat-raised-button color="accent" class="bouton" (click)="add(); shoppingCartService.incrementBadge()">
+  <button mat-raised-button color="accent" class="bouton" (click)="addAlert(); shoppingCartService.incrementBadge()">
     Ajouter au panier
   </button>
 
