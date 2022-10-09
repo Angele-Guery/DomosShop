@@ -21,4 +21,15 @@ public class CartModel {
         this.nbAbandonedOrders = 0;
         this.money = 0;
     }
+
+    @Override
+    public String toString() {
+        return "CartModel{" +
+                "id=" + id +
+                ", nbProduct=" + nbProduct +
+                ", nbOrders=" + nbOrders +
+                ", nbAbandonedOrders=" + nbAbandonedOrders +
+                ", money=" + money +
+                '}';
+    }
 }

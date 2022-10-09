@@ -23,5 +23,17 @@ public class ProductModel {
         this.nbInCart = 0;
     }
 
+    public ProductModel() {
+    }
 
+    @Override
+    public String toString() {
+        return "ProductModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", nbInCart=" + nbInCart +
+                '}';
+    }
 }
