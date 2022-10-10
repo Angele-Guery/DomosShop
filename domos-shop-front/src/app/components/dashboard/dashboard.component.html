@@ -1,4 +1,4 @@
-
+<div *ngFor="let c of cart">
 <mat-card>
   <h2>Dashboard</h2>
 
@@ -6,7 +6,9 @@
   <div class="title">
     Nombre de commandes passées :
   </div>
-  test<!-- l'afficher-->
+  <p *ngIf="c.nbOrders">
+  {{c.nbOrders}}
+  </p>
   </h3>
 
  <br>
@@ -15,19 +17,24 @@
   <div class="title">
     Nombre de paniers abandonnés :
   </div>
-    test<!-- l'afficher-->
+    <p *ngIf="c.nbAbandonedOrders">
+      {{c.nbAbandonedOrders}}
+    </p>
   </h3>
 
  <br>
 
   <h3>
   <div class="title">
-    Argent perçu heures par heures :
+    Argent total perçu :
   </div>
-    test<!-- l'afficher-->
+    <p *ngIf="c.money">
+      {{c.money}}
+    </p>
   </h3>
 
 </mat-card>
+</div>
 
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShoppingCartService} from '../../services/shopping-cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+cart : Array<any> = [];
 
-  constructor() { }
+showCart() {
+      this.shoppingCartService.getCart()
+        .subscribe((data: any) => this.cart = data);
+    }
+
+  constructor(public shoppingCartService : ShoppingCartService) { }
 
   ngOnInit(): void {
+  this.showCart();
   }
 
 }

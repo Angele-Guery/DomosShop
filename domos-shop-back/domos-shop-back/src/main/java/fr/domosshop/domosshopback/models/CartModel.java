@@ -32,4 +32,44 @@ public class CartModel {
                 ", money=" + money +
                 '}';
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getNbProduct() {
+        return nbProduct;
+    }
+
+    public void setNbProduct(int nbProduct) {
+        this.nbProduct = nbProduct;
+    }
+
+    public int getNbOrders() {
+        return nbOrders;
+    }
+
+    public void setNbOrders(int nbOrders) {
+        this.nbOrders = nbOrders;
+    }
+
+    public int getNbAbandonedOrders() {
+        return nbAbandonedOrders;
+    }
+
+    public void setNbAbandonedOrders(int nbAbandonedOrders) {
+        this.nbAbandonedOrders = nbAbandonedOrders;
+    }
+
+    public float getMoney() {
+        return money;
+    }
+
+    public void setMoney(float money) {
+        this.money = money;
+    }
 }

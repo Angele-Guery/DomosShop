@@ -9,7 +9,8 @@ import {ShoppingCartService} from '../../services/shopping-cart.service'
 })
 export class CartComponent implements OnInit {
 
-  products = products;
+  products : Array<any> = [];
+  sum =0;
 
   removeAlert(){
     window.alert('Le produit a été suprimé du panier!');
@@ -23,9 +24,53 @@ export class CartComponent implements OnInit {
     window.alert('Merci pour vos achats!');
   }
 
+    showProducts() {
+      this.shoppingCartService.getProducts()
+      .subscribe((data: any) => {this.products = data; this.sumPrices(); this.badge()});
+    }
+
+
+    removeFromCart(id : number) {
+      this.shoppingCartService.removeFromCart(id)
+      this.showProducts();
+    }
+
+    removeAllCart() {
+      this.shoppingCartService.removeAllCart()
+      this.showProducts();
+    }
+
+    buy(sum : number) {
+          this.shoppingCartService.buy(sum)
+        }
+
+    sumPrices(){
+      for(var product of this.products){
+        this.sum = this.sum + product.price * product.nbInCart;
+      }
+    }
+
+    canceled() {
+        this.shoppingCartService.canceled()
+    }
+
+    badge(){
+      this.shoppingCartService.nbProductAdded = 0;
+      for(var product of this.products){
+        this.shoppingCartService.nbProductAdded = this.shoppingCartService.nbProductAdded + product.nbInCart;
+      }
+      if(this.shoppingCartService.nbProductAdded != 0){
+        this.shoppingCartService.hidden = false;
+      }
+      else{
+        this.shoppingCartService.hidden = true;
+      }
+    }
+
   constructor(public shoppingCartService : ShoppingCartService) { }
 
   ngOnInit(): void {
+    this.showProducts();
   }
 
 }

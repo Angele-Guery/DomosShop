@@ -25,4 +25,30 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public Optional<ProductModel> addInCart(final Long id) {
+        return productRepository.findById(id)
+                .map(ProductModel -> {
+                    ProductModel.setNbInCart(ProductModel.getNbInCart()+1);
+                    return productRepository.save(ProductModel);
+                });
+    }
+
+    public Optional<ProductModel> removeFromCart(final Long id) {
+        return productRepository.findById(id)
+                .map(ProductModel -> {
+                    if(ProductModel.getNbInCart()>0){ProductModel.setNbInCart(ProductModel.getNbInCart()-1);}
+                    return productRepository.save(ProductModel);
+                });
+    }
+
+    public void removeAllCart() {
+                for(ProductModel p : productRepository.findAll()){
+                    p.setNbInCart(0);
+                    productRepository.save(p);
+                }
+
+    }
+
+
+
 }
